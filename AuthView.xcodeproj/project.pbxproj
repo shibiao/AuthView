@@ -12,6 +12,8 @@
 		04B1150B20CAC22400891F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B1150A20CAC22400891F70 /* Assets.xcassets */; };
 		04B1150E20CAC22400891F70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B1150C20CAC22400891F70 /* Main.storyboard */; };
 		04B1151120CAC22400891F70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1151020CAC22400891F70 /* main.m */; };
+		04B1151A20CAC24400891F70 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B1151920CAC24400891F70 /* Security.framework */; };
+		04B1151C20CAC25C00891F70 /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B1151B20CAC25C00891F70 /* SecurityInterface.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		04B1150F20CAC22400891F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B1151020CAC22400891F70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04B1151220CAC22400891F70 /* AuthView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AuthView.entitlements; sourceTree = "<group>"; };
+		04B1151920CAC24400891F70 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		04B1151B20CAC25C00891F70 /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = System/Library/Frameworks/SecurityInterface.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B1151C20CAC25C00891F70 /* SecurityInterface.framework in Frameworks */,
+				04B1151A20CAC24400891F70 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				04B1150320CAC22100891F70 /* AuthView */,
 				04B1150220CAC22100891F70 /* Products */,
+				04B1151820CAC24400891F70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +75,15 @@
 				04B1151220CAC22400891F70 /* AuthView.entitlements */,
 			);
 			path = AuthView;
+			sourceTree = "<group>";
+		};
+		04B1151820CAC24400891F70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04B1151B20CAC25C00891F70 /* SecurityInterface.framework */,
+				04B1151920CAC24400891F70 /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +117,11 @@
 				TargetAttributes = {
 					04B1150020CAC22100891F70 = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
